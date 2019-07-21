@@ -18,3 +18,9 @@ let snake;
     snake.draw();
   }, 250);
 })();
+
+window.addEventListener("keydown", evt => {
+  const dir = evt.key.replace("Arrow", "");
+  console.log(dir);
+  snake.changeDirection(dir);
+});
